@@ -6,6 +6,7 @@ import com.iucoding.ktor.chat.android.domain.model.Message
 import com.iucoding.ktor.chat.android.util.Resource
 import io.ktor.client.HttpClient
 import io.ktor.client.features.websocket.webSocketSession
+import io.ktor.client.request.parameter
 import io.ktor.client.request.url
 import io.ktor.http.cio.websocket.Frame
 import io.ktor.http.cio.websocket.WebSocketSession
@@ -30,6 +31,7 @@ class ChatSocketServiceImpl(
         return try {
             socket = client.webSocketSession {
                 url(Endpoint.ChatSocket.url)
+                parameter("username", username)
             }
             if (socket?.isActive == true) {
                 Resource.Success(Unit)
