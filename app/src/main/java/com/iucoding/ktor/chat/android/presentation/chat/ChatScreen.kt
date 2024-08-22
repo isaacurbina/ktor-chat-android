@@ -142,6 +142,7 @@ fun ChatScreen(
                         )
                     }
                 }
+                Spacer(modifier = Modifier.height(32.dp))
             }
         }
         Row(
