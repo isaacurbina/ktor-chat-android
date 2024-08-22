@@ -17,7 +17,7 @@ androidxLifecycleViewModel = "2.8.4"
 hiltLifecycleViewModel = "1.0.0-alpha03"
 hiltCompiler = "1.2.0"
 hiltNavigationCompose = "1.2.0"
-ktor = "2.3.12"
+ktor = "1.6.3"
 logback = "1.4.14"
 serialization = "1.3.0"
 
