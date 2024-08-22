@@ -33,7 +33,8 @@ class ChatViewModel @Inject constructor(
     val toastEvent = _toastEvent.asSharedFlow()
     // endregion
 
-    init {
+    // region UI interaction
+    fun connectToChat() {
         getAllMessages()
         savedStateHandle.get<String>("username")?.let {
             viewModelScope.launch {
@@ -55,7 +56,6 @@ class ChatViewModel @Inject constructor(
         }
     }
 
-    // region UI interaction
     fun onMessageChange(message: String) {
         _messageText.value = message
     }
